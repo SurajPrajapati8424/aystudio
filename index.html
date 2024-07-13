@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ay Studio - Modern Interior Design Portfolio">
+  <meta name="keywords" content="Interior Design, Modern Design, Portfolio, Ay Studio">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Ay Studio">
+  <meta property="og:description" content="Explore the modern interior design works by Ay Studio.">
+  <meta property="og:image" content="path/to/social-media-image.jpg">
+  <meta property="og:url" content="http://www.aystudio.com">
+  <title>Ay Studio</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=6JG6h9JDB4Bc&format=png&color=000000" type="image/x-icon">
+  <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-custom navbar-dark navbar-mainbg fixed-top" id="navbar-cool">
+    <div class="container-fluid">
+        <a class="navbar-brand navbar-logo" href="index.html">
+          <img src="img/AY Studio.jpg" width="30px" height="30px" class="d-inline-block align-top" alt="AY Studio logo">
+          AyStudio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <!-- <i class="fas fa-bars text-white"></i> -->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 20px;">
+            <ul class="navbar-nav nav-pills ml-auto">
+                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#landing-page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Project</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+      </div>
+    </nav>
+
+  <div data-spy="scroll" data-target="#navbar-cool" data-offset="0">  
+  <!-- Header Section -->
+  <header class="jumbotron text-center landing-page contain" id="landing-page">
+    <div class="landing-content">
+        <div class="landing-text">
+            <h1 class="display-3">Welcome to My Portfolio</h1>
+            <p class="lead">Showcasing my interior design projects</p>
+        </div>
+        <div class="landing-images">
+          <img src="img/product.png" alt="Design Image 2" class="landing-image">
+          <img src="img/building.jpg" alt="Design Image 1" class="landing-image">
+        </div>
+    </div>
+</header>
+
+  <!-- About Section -->
+  <section id="about" class="container my-5">
+    <div class="row">
+      <div class="col-md-8">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non magna quis felis bibendum viverra.</p>
+      </div>
+      <div class="col-md-4">
+        <img src="img/image1.jpg" class="img-fluid rounded" alt="About Me">
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Section -->
+  <section id="projects" class="container my-5">
+    <h2 class="text-center">Projects</h2>
+    <div class="row">
+      <!-- Repeat for each portfolio item -->
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <!-- <img src="img/image2.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description of Project 1.</p>
+          </div> -->
+          <a href="project1.html">
+            <img src="img/image2.jpg" class="card-img-top" alt="Detailed view of Project 1">
+            <div class="card-body">
+                <h5 class="card-title">Project 1</h5>
+                <p class="card-text">Brief description of Project 1. This project highlights...</p>
+            </div>
+        </a>
+        </div>
+      </div>
+      <!-- Add more portfolio items here -->
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container my-5">
+      <h2 class="text-center">Contact</h2>
+      <form action="your-server-endpoint" method="POST">
+          <div class="form-row">
+              <div class="form-group col-md-6">
+                  <label for="name">Name</label>
+                  <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+              </div>
+              <div class="form-group col-md-6">
+                  <label for="email">Email</label>
+                  <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+              </div>
+          </div>
+          <div class="form-group">
+              <label for="message">Message</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+  </section>
+</div>
+
+  <!-- Footer -->
+<footer class="text-center py-4">
+  <p>&copy; 2024 Ay Studio. All rights reserved.</p>
+  <div>
+      <a href="https://facebook.com" target="_blank" class="mx-2">FB<i class="fab fa-facebook"></i></a>
+      <a href="https://instagram.com" target="_blank" class="mx-2">IG<i class="fab fa-instagram"></i></a>
+      <a href="https://linkedin.com" target="_blank" class="mx-2">Li<i class="fab fa-linkedin"></i></a>
+  </div>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Bootstrap Bundle with Popper -->
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+  <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+  <script src="bootstrap-5.3.3-dist/js/script.js"></script>
+</body>
+
+</html>
