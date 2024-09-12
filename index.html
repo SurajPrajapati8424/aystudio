@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,132 +15,272 @@
   <link rel="icon" href="https://img.icons8.com/?size=100&id=6JG6h9JDB4Bc&format=png&color=000000" type="image/x-icon">
   <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
 </head>
+<style>
+  a img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  a img:hover {
+    transform: scale(1.1);
+    /* Enlarge the image slightly on hover */
+  }
+
+  .image-container {
+    position: relative;
+    text-align: center;
+    /* Aligns text to center */
+    width: 100%;
+    /* Full-width container */
+  }
+
+  /* Image styling */
+  .image-container img {
+    width: 100%;
+    /* Image takes full width of container */
+    height: auto;
+    /* Maintain aspect ratio */
+  }
+
+  /* Text overlay styling */
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center the text */
+    color: white;
+    /* Text color */
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+</style>
+
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-custom navbar-dark navbar-mainbg fixed-top" id="navbar-cool">
     <div class="container-fluid">
-        <a class="navbar-brand navbar-logo" href="index.html">
-          <img src="img/AY Studio.jpg" width="30px" height="30px" class="d-inline-block align-top" alt="AY Studio logo">
-          AyStudio</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-          <!-- <i class="fas fa-bars text-white"></i> -->
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 20px;">
-            <ul class="navbar-nav nav-pills ml-auto">
-                <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                <li class="nav-item active">
-                  <a class="nav-link" href="#landing-page">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#projects">Project</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-              <li class="nav-item">
-                    <a class="nav-link" href="landing.html">Landing</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand navbar-logo" href="index.html" style="font-weight: bolder">
+        <!-- <img src="img/AY Studio.jpg" width="30px" height="30px" class="d-inline-block align-top" alt="AY Studio logo"> -->
+        AY &nbsp;STUDIO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <!-- <i class="fas fa-bars text-white"></i> -->
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent" style="padding-left: 20px;">
+        <ul class="navbar-nav nav-pills ml-auto">
+          <div class="hori-selector">
+            <div class="left"></div>
+            <div class="right"></div>
+          </div>
+          <li class="nav-item active">
+            <a class="nav-link" href="#landing-page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Project</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+      <div>
+        <a href="https://www.instagram.com/aystudio___" style="color:black;">
+          <img src="img\icons8-youtube-48.png" alt="youtubelogo" class="ay-yt"
+            style="height: 30px; margin-right: 10px;">
+        </a>
+        <a>
+          <img src="img\icons8-instagram-48.png" alt="Instalogo" class="ay-ins" style="height: 30px;">
+        </a>
+      </div>
+    </div>
+  </nav>
 
-  <div data-spy="scroll" data-target="#navbar-cool" data-offset="0">  
-  <!-- Header Section -->
-  <header class="jumbotron text-center landing-page contain" id="landing-page">
-    <div class="landing-content">
+  <div data-spy="scroll" data-target="#navbar-cool" data-offset="0">
+    <!-- Header Section -->
+    <header class="jumbotron text-center landing-page contain p-0" id="landing-page">
+      <div class="landing-content" style="flex-direction: row;">
         <div class="landing-text">
-            <h1 class="display-3">Welcome to My Portfolio</h1>
-            <p class="lead">Showcasing my interior design projects</p>
+          <h1 class="display-3">Welcome to My Portfolio</h1>
+          <p class="lead" style="font-size: large;">
+            I believe that good design goes beyond mere aesthetics; it enhances the way we live and work. My approach is
+            client-centric, focusing on understanding your needs, preferences, and vision. By combining innovative ideas
+            with practical solutions, I aim to create spaces that are not only beautiful but also livable and efficient.
+          </p>
         </div>
         <div class="landing-images">
           <img src="img/product.png" alt="Design Image 2" class="landing-image">
           <img src="img/building.jpg" alt="Design Image 1" class="landing-image">
         </div>
-    </div>
-</header>
-
-  <!-- About Section -->
-  <section id="about" class="container my-5">
-    <div class="row">
-      <div class="col-md-8">
-        <h2>About Me</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec non magna quis felis bibendum viverra.</p>
       </div>
-      <div class="col-md-4">
-        <img src="img/image1.jpg" class="img-fluid rounded" alt="About Me">
-      </div>
-    </div>
-  </section>
+    </header>
 
-  <!-- Project Section -->
-  <section id="projects" class="container my-5">
-    <h2 class="text-center">Projects</h2>
-    <div class="row">
-      <!-- Repeat for each portfolio item -->
-      <div class="col-md-4">
-        <div class="card mb-4">
-          <!-- <img src="img/image2.jpg" class="card-img-top" alt="Project 1">
+    <!-- <div class="single-item">
+      <div>
+        <video style="width: 100%;">
+          <source src=".\videos\living area.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <video style="width: 100%;">
+          <source src=".\videos\living area.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div>
+        <video style="width: 100%;">
+          <source src=".\videos\living area.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div> -->
+
+    <!-- Project Section -->
+    <section id="projects" class="container">
+      <h2 class="text-center">Projects</h2>
+      <div class="row">
+        <!-- Repeat for each portfolio item -->
+        <!-- <div class="col-md-4"> -->
+        <div class=" col-md-4 ">
+          <div class="mb-4 image-container" style="border-radius: 30px;">
+            <!-- <img src="img/image2.jpg" class="card-img-top" alt="Project 1">
           <div class="card-body">
             <h5 class="card-title">Project 1</h5>
             <p class="card-text">Description of Project 1.</p>
           </div> -->
-          <a href="project1.html">
-            <img src="img/image2.jpg" class="card-img-top" alt="Detailed view of Project 1">
-            <div class="card-body">
-                <h5 class="card-title">Project 1</h5>
-                <p class="card-text">Brief description of Project 1. This project highlights...</p>
-            </div>
-        </a>
+            <a href="\kandiwali.html">
+              <img src="img/image1.jpg" class="card-img-top" alt="Detailed view of Project 1"
+                style="border-radius: 60px;">
+              <div class="text-overlay">Kandivali Project</div>
+              <!-- <a href="\kandiwali.html">Kandivali Project</a>                 -->
+              <!-- <div class="card-body"> -->
+              <!-- <a href="aystudio-main\kandiwali.html"></a> -->
+              <!-- <h5 class="card-title">Project 1</h5> -->
+              <!-- <p class="card-text">Brief description of Project 1. This project highlights...</p> -->
+              <!-- </div> -->
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-4 image-container" style="border-radius: 30px;">
+            <!-- <img src="img/image2.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description of Project 1.</p>
+          </div> -->
+            <a href="\mirard.html">
+              <img src="img/image2.jpg" class="card-img-top" alt="Detailed view of Project 1"
+                style="border-radius: 60px;">
+              <div class="text-overlay">Miraroad Project</div>
+              <!-- <a href="\mirard.html">Miraroad Project</a> -->
+              <!-- <div class="card-body">               -->
+              <!-- <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Brief description of Project 1. This project highlights...</p> -->
+              <!-- </div> -->
+            </a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="mb-4 image-container" style="border-radius: 30px;">
+            <!-- <img src="img/image2.jpg" class="card-img-top" alt="Project 1">
+          <div class="card-body">
+            <h5 class="card-title">Project 1</h5>
+            <p class="card-text">Description of Project 1.</p>
+          </div> -->
+            <a href="\santacruz.html">
+              <img src="img/image3.jpg" class="card-img-top" alt="Detailed view of Project 1"
+                style="border-radius: 60px;">
+                <div class="text-overlay">Santacruz Project</div>
+              <!-- <a href="\santacruz.html">Santacruz Project</a> -->
+              <!-- <div class="card-body"> -->
+              <!-- <h5 class="card-title">Project 1</h5>
+              <p class="card-text">Brief description of Project 1. This project highlights...</p> -->
+              <!-- </div> -->
+            </a>
+          </div>
+        </div>
+        <!-- </div> -->
+        <!-- Add more portfolio items here -->
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <h2>About Me</h2>
+          <p style="font-size: 21px;">
+            Hi, I’m Ajay, an interior designer passionate about creating beautiful and functional spaces. With years of
+            experience in both residential and commercial projects, I focus on understanding your needs and bringing
+            your vision to life.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img src="img/image1.jpg" class="img-fluid rounded" alt="About Me">
         </div>
       </div>
-      <!-- Add more portfolio items here -->
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="container my-5">
-      <h2 class="text-center">Contact</h2>
-      <form action="your-server-endpoint" method="POST">
-          <div class="form-row">
-              <div class="form-group col-md-6">
-                  <label for="name">Name</label>
-                  <input type="text" class="form-control" id="name" placeholder="Your Name" required>
-              </div>
-              <div class="form-group col-md-6">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control" id="email" placeholder="Your Email" required>
-              </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+      <h2 class="text-center" style="border: 1px solid;border-radius: 10px;">Contact</h2>
+      <form action="your-server-endpoint" method="POST" style="border: 1px solid;border-radius: 10px; padding: 15px;">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
           </div>
-          <div class="form-group">
-              <label for="message">Message</label>
-              <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
           </div>
-          <button type="submit" class="btn btn-primary">Send</button>
+        </div>
+        <div class="form1-row">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin: 3px;">Send</button>
       </form>
-  </section>
-</div>
+    </section>
 
-  <!-- Footer -->
-<footer class="text-center py-4">
-  <p>&copy; 2024 Ay Studio. All rights reserved.</p>
-  <div>
-      <a href="https://facebook.com" target="_blank" class="mx-2">FB<i class="fab fa-facebook"></i></a>
-      <a href="https://instagram.com" target="_blank" class="mx-2">IG<i class="fab fa-instagram"></i></a>
-      <a href="https://linkedin.com" target="_blank" class="mx-2">Li<i class="fab fa-linkedin"></i></a>
-  </div>
-</footer>
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <!-- Bootstrap Bundle with Popper -->
-<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
-  <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
-  <script src="bootstrap-5.3.3-dist/js/script.js"></script>
+    <!-- Footer -->
+    <footer class="text-center py-4">
+      <p>&copy; 2024 Ay Studio. All rights reserved.</p>
+      <div>
+        <a href="https://facebook.com" target="_blank" class="mx-2">FB<i class="fab fa-facebook"></i></a>
+        <a href="https://instagram.com" target="_blank" class="mx-2">IG<i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com" target="_blank" class="mx-2">Li<i class="fab fa-linkedin"></i></a>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
+    <script src="bootstrap-5.3.3-dist/js/script.js"></script>
+
+    <!-- Slick Script -->
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $('.single-item').slick();
+      });
+    </script>
 </body>
 
 </html>

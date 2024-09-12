@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miraroad</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ay Studio - Modern Interior Design Portfolio">
+  <meta name="keywords" content="Interior Design, Modern Design, Portfolio, Ay Studio">
+  <meta name="author" content="Your Name">
+  <meta property="og:title" content="Ay Studio">
+  <meta property="og:description" content="Explore the modern interior design works by Ay Studio.">
+  <meta property="og:image" content="path/to/social-media-image.jpg">
+  <meta property="og:url" content="http://www.aystudio.com">
+  <title>Ay Studio</title>
+  <link rel="icon" href="https://img.icons8.com/?size=100&id=6JG6h9JDB4Bc&format=png&color=000000" type="image/x-icon">
+  <link href="bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+</head>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+  }
+
+  .slider {
+    position: relative;
+    width: 70%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+  }
+
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+    border-radius: 50%;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+</style>
+
+<body>
+  <nav class="navbar navbar-expand-custom navbar-dark navbar-mainbg fixed-top" id="navbar-cool">
+    <div class="container-fluid">
+      <a class="navbar-brand navbar-logo" href="index.html" style="font-weight: bolder">
+        <!-- <img src="img/AY Studio.jpg" width="30px" height="30px" class="d-inline-block align-top" alt="AY Studio logo"> -->
+        AY &nbsp;STUDIO</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        <!-- <i class="fas fa-bars text-white"></i> -->
+      </button>
+      <div>
+        <a href="https://www.instagram.com/aystudio___/">
+          <img src="img\icons8-youtube-48.png" alt="youtubelogo" class="ay-yt"
+            style="height: 30px; margin-right: 10px;">
+        </a>
+        <a>
+          <img src="img\icons8-instagram-48.png" alt="Instalogo" class="ay-ins" style="height: 30px;">
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div style="display: flex; justify-content: center; align-items: center; margin: 70px;">
+    <h2 style="font-weight: bold;">Miraroad Project</h2>
+  </div>
+  <div class="slider">
+    <div class="slides">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <img src="img/1.1.png" alt="Image 1">
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="img/2.1.png" alt="Image 2">
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="img/3.1.png" alt="Image 3">
+      </div>
+      <!-- Slide 4 -->
+      <div class="slide">
+        <img src="img/4.1.png" alt="Image 4">
+      </div>
+    </div>
+
+    <!-- Navigation buttons -->
+    <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+    <a class="next" onclick="moveSlide(1)">&#10095;</a>
+  </div>
+</body>
+<script>
+  let currentSlide = 0;
+
+  function showSlide(index) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    if (index >= totalSlides) {
+      currentSlide = 0;
+    } else if (index < 0) {
+      currentSlide = totalSlides - 1;
+    } else {
+      currentSlide = index;
+    }
+
+    slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+  }
+
+  function moveSlide(n) {
+    showSlide(currentSlide + n);
+  }
+
+  // Optional: Auto slide feature
+  setInterval(() => {
+    moveSlide(1);
+  }, 3000);
+
+</script>
+
+</html>
